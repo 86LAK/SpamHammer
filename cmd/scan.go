@@ -26,7 +26,6 @@ var scanCmd = &cobra.Command{
 				"X-Message-Id": "ABCD-1234"
 				"X-SpamHammer-Fingerprint": "0|16"
 			},
-			"links": [],
 			"date": "2024-01-01T12:00:00Z"
 		},
 	}
