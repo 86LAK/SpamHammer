@@ -23,7 +23,7 @@ spamhammer scan --help
 
 #### Scanning an Email
 
-Tickets are generated from a JSON file like so:
+Reports are generated from a JSON file like so:
 
 ```json
 {
@@ -85,10 +85,13 @@ Example Output:
 }
 ```
 
-
 ## Motivation
 
 This project was created for the assessment of the subject CSSE6400 Software Architecture at the University of Queensland.  It is intended to generate an output that requires work, this version accomplishes this by computing an arbitrary BCRYPT hash which is thrown away. The program then generates a report based on the Fingerprint given to it.
+
+## Fingerprint
+
+The fingerprint is a given pipe seperated seed for SpamHammer to generate a report. The first number is a boolean 0/1 which is the malicious status of the email. The second number is the iterations of the BCRYPT hash. It is recommended to keep the iterations within 12 -> 20.
 
 ## Performance Characteristics
 
@@ -100,11 +103,11 @@ todo(evan): Redo these recordings from last year.
 psrecord "spamhammer ....." --log activity.txt --plot performance.png
 ```
 
-| Type                | Stats                        |
-|---------------------|------------------------------|
-| Scan (Small Email)  | ![](performance/scan.png)  |
-| Scan (medium Email) | ![](performance/scan.png)  |
-| Scan (large Email)  | ![](performance/scan.png)  |
+| Type                      | Stats                        |
+|---------------------------|------------------------------|
+| Scan (sm) [12 iterations] | ![](performance/scan.png)  |
+| Scan (md) [16 iterations] | ![](performance/scan.png)  |
+| Scan (lg) [18 iterations] | ![](performance/scan.png)  |
 
 ## Contributing
 
