@@ -95,19 +95,17 @@ The fingerprint is a given pipe seperated seed for SpamHammer to generate a repo
 
 ## Performance Characteristics
 
-These stats were made on a **t4g.micro** using:
-
-todo(evan): Redo these recordings from last year.
+These stats were made on a **t3.small** using:
 
 ```bash
 psrecord "spamhammer ....." --log activity.txt --plot performance.png
 ```
 
-| Type                      | Stats                        |
-|---------------------------|------------------------------|
-| Scan (sm) [12 iterations] | ![](performance/scan.png)  |
-| Scan (md) [16 iterations] | ![](performance/scan.png)  |
-| Scan (lg) [18 iterations] | ![](performance/scan.png)  |
+| Type                      | Stats                       |
+|---------------------------|-----------------------------|
+| Scan (sm) [12 iterations] | ![](performance/small.png)  |
+| Scan (md) [16 iterations] | ![](performance/medium.png) |
+| Scan (lg) [18 iterations] | ![](performance/large.png)  |
 
 ## Contributing
 
