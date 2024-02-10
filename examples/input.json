@@ -1,0 +1,15 @@
+{
+  "id": "ABCD-1234",
+  "email": {
+    "from": "uqehugh3@uq.edu.au",
+    "to": "your-email@uq.edu.au",
+    "subject": "CSSE6400: Cloud Assignment Help",
+    "body": "Hey Valued Student\nHows the assignment going?\nRegards\nEvan Hughes",
+    "headers": {
+      "X-Customer-Id": "1234",
+      "X-Message-Id": "ABCD-1234",
+      "X-SpamHammer-Fingerprint": "0|12"
+    },
+    "date": "2024-01-01T12:00:00Z"
+  }
+}
