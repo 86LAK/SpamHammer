@@ -28,18 +28,8 @@ Reports are generated from a JSON file like so:
 ```json
 {
   "id": "ABCD-1234",
-  "email": {
-    "from": "uqehugh3@uq.edu.au",
-    "to": "uqehugh3@uq.edu.au",
-    "subject": "CSSE6400: Cloud Assignment Help",
-    "body": "Hey Valued Student\nHows the assignment going?\nRegards\nEvan Hughes",
-    "headers": {
-      "X-Customer-Id": "1234",
-      "X-Message-Id": "ABCD-1234",
-      "X-SpamHammer-Fingerprint": "0|12"
-    },
-    "date": "2024-01-01T12:00:00Z"
-  }
+  "content": "Hey Valued Student\nHows the assignment going?\nRegards\nEvan Hughes",
+  "metadata": "0|12"
 }
 ```
 
@@ -91,7 +81,7 @@ This project was created for the assessment of the subject CSSE6400 Software Arc
 
 ## Fingerprint
 
-The fingerprint is a given pipe seperated seed for SpamHammer to generate a report. The first number is a boolean 0/1 which is the malicious status of the email. The second number is the iterations of the BCRYPT hash. It is recommended to keep the iterations within 12 -> 20.
+The fingerprint is a given pipe seperated seed for SpamHammer to generate a report. The first number is a boolean 0/1 which is the malicious status of the email. The second number is the iterations of the BCRYPT hash. It is recommended to keep the iterations within 8 -> 20.
 
 ## Performance Characteristics
 

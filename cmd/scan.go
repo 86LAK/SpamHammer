@@ -16,19 +16,11 @@ var scanCmd = &cobra.Command{
 
 	{
 		"id": "ABCD-1234",
-		"email": {
-			"from": "uqehugh3@uq.edu.au",
-			"to": "your-email@uq.edu.au",
-			"subject": "CSSE6400: Cloud Assignment Help",
-			"body": "Hey Valued Student\nHows the assignment going?\nRegards\nEvan Hughes",
-			"headers": {
-				"X-Customer-Id": "1234",
-				"X-Message-Id": "ABCD-1234"
-				"X-SpamHammer-Fingerprint": "0|16"
-			},
-			"date": "2024-01-01T12:00:00Z"
-		},
+		"content": "Hey Valued Student\nHows the assignment going?\nRegards\nEvan Hughes",
+		"metadata": "0|16"
 	}
+
+	Where the content is the email body and the metadata is the SpamHammer metadata value from the original request. 
 `,
 	Run: func(cmd *cobra.Command, args []string) {
 		input, _ := cmd.Flags().GetString("input")

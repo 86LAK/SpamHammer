@@ -19,7 +19,7 @@ func (d Scanner) Spin(cost int) error {
 }
 
 func (d Scanner) ScanEmail(request Request) (*Report, error) {
-	seed := request.Email.Headers.Seed
+	seed := request.Metadata
 	isMalicious := strings.Split(seed, "|")[0] == "1"
 	cost, err := strconv.ParseInt(strings.Split(seed, "|")[1], 10, 64)
 	if err != nil {
